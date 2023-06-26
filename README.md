@@ -1,7 +1,7 @@
 # AutoHotkey-Virtual-Desktops
-DEVELOPED ON WINDOWS 10, CONFIRMED WORKING ON WINDOWS 11
+DEVELOPED ON WINDOWS 10, CONFIRMED WORKING ON WINDOWS 11 (USE WITCHEVER DLL IS APPLICABLE AND RENAME TO VirtualDesktopAccessor.dll)
 
-This is a library plus a DLL that allows one to control Windows 10 Virtual Desktops using AutoHotkey.
+This is a class plus one of two DLLs that allows one to control Windows 10/11 Virtual Desktops using AutoHotkey.
 
 Originally developed by Github user pmb6tz as a set of functions accomplishing the same goal, I have turned that into a [library](https://www.autohotkey.com/docs/Functions.htm#lib) that allows one to call these functions without an #include statement. Simply place both VD.ahk and VirtualDesktopAccessor.dll into an applicable Library folder, call the functions you desire, and voilà!
 
@@ -16,4 +16,6 @@ Setup for the library's use is done simply by calling VD_Init(). VD_Init() has 3
 * UseLabels = 1 and UseNames = 0: Labels are displayed on all desktops, labels are desktop numbers
 * Both 1: Labels are displayed on all desktops, labels are desktop numbers, unless a name is provided.
 
-Using VD_ChangeDesktopOrMoveWindow(num, key) allows you to set any key as an extra modifier for a hotkey that will move the active window to the target desktop if it is held down, or simply move to the target desktop if it is not.
+Using ChangeDesktopOrMoveWindow(num, key) allows you to set any key as an extra modifier for a hotkey that will move the active window to the target desktop if it is held down, or simply move to the target desktop if it is not.
+
+Similarly, you can use ChangeDesktopLeftOrMoveWindow(key) or ChangeDesktopRightOrMoveWindow(key) to move a window left or right when the hotkey is triggered, or by holding down the extra key, move a window to the desktop tot the left or right.
